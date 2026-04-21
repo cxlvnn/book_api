@@ -16,6 +16,7 @@ class BookResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'owner' => new UserResource($this->user),
             'title' => $this->title,
             'author' => $this->author,
             'genre' => $this->genre,
